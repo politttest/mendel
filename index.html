@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style_index.css">
+    <link rel="SHORTCUT ICON" href="img/depositphotos_96281512-stock-illustration-genetics-theme-icon.jpg" type="image/x-icon">
     <title>Закони Менделя</title>
   </head>
   <body>
@@ -30,10 +31,10 @@
     </nav>
     <div class="container">
         <div class="zakon">
-            <div class="zakon__header">Оберіть закон</div>
+            <div id="zakon__time_header" class="zakon__header">Оберіть закон</div>
             <div class="zakon__main_menu">
-                <div class="zakon__first block">
-                    <p class="zakon__text_first">AA x aa</p>
+                <div id="zakon__first" class="none">
+                    <p class="zakon__text_first"><span class="yellow">AA</span> x <span class="green">aa</span></p>
                     <div class="block_with_element">
                         <div class="first__first_element circle"><span>A</span></div>
                         <div class="first__second_element circle"><span>A</span></div>
@@ -56,11 +57,113 @@
                         <div class="first__third_element circle2"><span>Aa</span></div>
                         <div class="first__forth_element circle2"><span>Aa</span></div>
                     </div>
+                    <div class="block_with_infa">
+                        <p class="first__first_infa infa">100% - жовті.</p>
+                    </div>
+                </div>
+                <div id="zakon__second" class="none">
+                    <p class="zakon__text_first"><span class="yellow">Aa</span> x <span class="yellow">Aa</span></p>
+                    <div class="block_with_element">
+                        <div class="second__first_element circle"><span>A</span></div>
+                        <div class="second__second_element circle"><span>a</span></div>
+                        <div class="second__third_element circle"><span>A</span></div>
+                        <div class="second__forth_element circle"><span>a</span></div>
+                    </div>
+                    <div class="lines">
+                        <div class="second__first_line line">___</div>
+                        <div class="second__second_line line">______</div>
+                        <div class="second__third_line line">______</div>
+                        <div class="second__forth_line line">____________</div>
+                        <div class="second__fifth_line line">____________</div>
+                        <div class="second__sixth_line line">______</div>
+                        <div class="second__seventh_line line">______</div>
+                        <div class="second__eightth_line line">___</div>
+                    </div>
+                    <div class="block_with_result">
+                        <div class="second__first_element circle2"><span>AA</span></div>
+                        <div class="second__second_element circle2"><span>Aa</span></div>
+                        <div class="second__third_element circle2"><span>Aa</span></div>
+                        <div class="second__forth_element circle2 green"><span>aa</span></div>
+                    </div>
+                    <div class="block_with_infa">
+                        <p class="second__first_infa infa">75% - жовті; <br> 25% - зелені.</p>
+                    </div>
+                </div>
+                <div id="zakon__third" class="none">
+                    <p class="zakon__text_first"><span class="yellow">AaBb</span> x <span class="yellow">AaBb</span></p>
+                    <div class="third_block_with_element">
+                        <div class="third__first_element"><span>A</span></div>
+                        <div class="third__second_element"><span>a</span></div>
+                        <div class="third__third_element circle"><span>B</span></div>
+                        <div class="third__forth_element no-circle"><span>b</span></div>
+                        <div class="third__fifth_element"><span>A</span></div>
+                        <div class="third__sixth_element"><span>a</span></div>
+                        <div class="third__seventh_element circle"><span>B</span></div>
+                        <div class="third__eightth_element no-circle"><span>b</span></div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">AB</th>
+                            <th scope="col">Ab</th>
+                            <th scope="col">aB</th>
+                            <th scope="col">ab</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">AB</th>
+                            <td class="yellow">AABB</td>
+                            <td class="yellow">AABb</td>
+                            <td class="yellow">AaBB</td>
+                            <td class="yellow">AaBb</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Ab</th>
+                            <td class="yellow">AABb</td>
+                            <td class="yellow">AAbb</td>
+                            <td class="yellow">AaBb</td>
+                            <td class="yellow">Aabb</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">aB</th>
+                            <td class="yellow">AaBB</td>
+                            <td class="yellow">AaBb</td>
+                            <td class="green">aaBB</td>
+                            <td class="green">aaBb</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">ab</th>
+                            <td class="yellow">AaBb</td>
+                            <td class="yellow">Aabb</td>
+                            <td class="green">aaBb</td>
+                            <td class="green">aabb</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    <div class="block_with_infa">
+                        <p class="third__forth_infa infa">9/16 - жовті з гладенькою формою; <br>
+                                                          3/16 - жовті з кривою формою; <br>
+                                                          3/16 - зелені з гладенькою формою; <br>
+                                                          1/16 - зелена з кривою формою.</p>
+                    </div>
+                </div>
+                
+                <!-- <div>
+                    Скрещевание 2х гомозиготных орг., один гомозиготен по доминантному аллею, а второй - рецесивному, то мы получим... 
+                </div> -->
+            </div>
+            <div class="zakon__footer">
+                <div id="all_infa" class="none">
+                    <p class="first_infa infa"><strong>AA</strong> - гомозиготний організм за домінантною ознакою</p>
+                    <p class="third_infa infa"><strong>Aa</strong> - гетерозигота</p>
+                    <p class="second_infa infa"><strong>aa</strong> - гомозиготний організм за рецесивною ознакою</p>
                 </div>
             </div>
-            <div class="zakon__footer"></div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  </body>
+    <script src="js/js_index.js"></script>
+</body>
 </html>
